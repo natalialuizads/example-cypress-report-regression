@@ -318,7 +318,7 @@ function startMfeServer() {
     }
 
     // Start the Angular dev server
-    const mfeServer = spawn('npm', ['start'], {
+    const mfeServer = spawn('npx', ['http-server', './dist/browser', '--port', '4200'], {
       cwd: mfePath,
       stdio: 'pipe',
       shell: true
@@ -331,8 +331,8 @@ function startMfeServer() {
       const output = data.toString();
       console.log(`   MFE: ${output.trim()}`);
 
-      // Check if server is ready (Angular dev server message)
-      if (output.includes('compiled successfully') || output.includes('Local:')) {
+      // Check if server is ready (http-server message)
+      if (output.includes('Available on:')) {
         if (!serverReady) {
           serverReady = true;
           console.log('✅ MFE server is ready!\n');
