@@ -1,0 +1,12 @@
+{
+  "label": "📊 Histórico de Testes",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "title": "Histórico de Testes de Regressão",
+    "description": "Relatórios automáticos gerados pelos testes de regressão. Os relatórios mais recentes aparecem primeiro.",
+    "slug": "/historico"
+  },
+  "collapsible": true,
+  "collapsed": false
+}
